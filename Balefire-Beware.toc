@@ -1,0 +1,7 @@
+## Interface: 11404
+## Version: 1.0.0
+## Title: Balefire Beware
+## Notes: Displays a warning when the maximum stacks of Balefire Bolt is reached before dying.
+## Author: YourName
+
+BalefireBeware.lua
