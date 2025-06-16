@@ -18,7 +18,7 @@ local globalCount = 0
 
 -- Animation variables
 local alphaValue = 0
-local increment = 0.005  -- How much the alpha changes per tick
+local increment = 0.010  -- How much the alpha changes per tick
 local pulseDuration = 0.01  -- Time between each alpha change (seconds)
 local tickerHandle = nil  -- Variable to store the ticker handle
 
@@ -57,7 +57,7 @@ local function OnEvent(self, event, ...)
                     if name == "Balefire Bolt" then
                       globalCount = count
                       balefireBoltFound = true
-                      if count == 9 then
+                      if count == 4 then
                           balefireBoltFound = true
                           if not skullFrame:IsShown() then
                             print('|cFFFF0000WARNING: Stop casting Balefire!!! |r')
@@ -81,7 +81,7 @@ local function OnEvent(self, event, ...)
                   end
                 end
 
-                if globalCount == 9 then
+                if globalCount == 4 then
                   if event == "UNIT_SPELLCAST_START" then
                     -- Check if the player is casting "Balefire Bolt"
                     local spellName = GetSpellInfo(429310)  -- You may need to adjust the spell index if necessary
